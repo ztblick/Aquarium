@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-public class Aquarium implements ActionListener{
+public class Aquarium implements ActionListener {
     private AquariumView window;
     private final int NUM_FISH = 20;
     private static final int SLEEP_TIME = 110;
