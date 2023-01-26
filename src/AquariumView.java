@@ -1,10 +1,17 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.util.ArrayList;
-
+/**
+ * The Aquarium
+ * (Aquarium, AquariumView, & Fish)
+ *
+ * Built by Z. Blick on Nov. 25 2022 for CS2 @ Menlo School
+ * with inspiration from Steven Holzner's "Java After Hours" (2006)
+ *
+ * This program simulates a group of fish swimming around, periodically
+ * changing directions when they reach the edge of the tank.
+ */
 public class AquariumView extends JFrame {
-
     private Image aquariumImage;
     private Image[] fishImages;
     private final int WINDOW_WIDTH = 1000;
@@ -12,12 +19,10 @@ public class AquariumView extends JFrame {
     private Aquarium a;
     public AquariumView(Aquarium a) {
 
-        this.a = a;
-        fishImages = new Image[2];
-        fishImages[0] = new ImageIcon("Resources/fish1.png").getImage();
-        fishImages[1] = new ImageIcon("Resources/fish2.png").getImage();
-        aquariumImage = new ImageIcon("Resources/bubbles.jpg").getImage();
+        // Initialize instance variables.
+        // TODO: initialize the View's instance variables.
 
+        // Setup the window and the buffer strategy.
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setTitle("The Aquarium");
         this.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
@@ -25,7 +30,7 @@ public class AquariumView extends JFrame {
         createBufferStrategy(2);
     }
 
-    public Image[] getFishImages() {
+    public Image[] getImages() {
         return fishImages;
     }
 
@@ -45,14 +50,13 @@ public class AquariumView extends JFrame {
         Toolkit.getDefaultToolkit().sync();
     }
 
+    /**
+     * myPaint
+     *
+     * This is used by the buffering strategy to do the actual painting.
+     * It draws the background image, then draws each fish on top of it.
+     */
     public void myPaint(Graphics g) {
-        // Draw the background
-        g.drawImage(aquariumImage, 0, 0, this);
-        // Add all the fish on top
-        ArrayList<Fish> fishes = a.getFishes();
-        for (Fish fish : fishes) {
-            fish.draw(g);
-        }
+        // TODO: Write the paint method.
     }
-
 }
