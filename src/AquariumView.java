@@ -16,6 +16,7 @@ public class AquariumView extends JFrame {
     private Image[] fishImages;
     private final int WINDOW_WIDTH = 1000;
     private final int WINDOW_HEIGHT = 800;
+    private final int TITLE_BAR_HEIGHT = 23;
     private Aquarium a;
     public AquariumView(Aquarium a) {
 
