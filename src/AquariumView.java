@@ -17,8 +17,8 @@ public class AquariumView extends JFrame {
     private final int WINDOW_WIDTH = 1000;
     private final int WINDOW_HEIGHT = 800;
     private final int TITLE_BAR_HEIGHT = 23;
-    private Aquarium a;
-    public AquariumView(Aquarium a) {
+    private Aquarium backend;
+    public AquariumView(Aquarium backend) {
 
         // Initialize instance variables.
         // TODO: initialize the View's instance variables.
